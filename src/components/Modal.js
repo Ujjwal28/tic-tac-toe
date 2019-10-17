@@ -6,7 +6,10 @@ import LikeIcon from "../static/like.png";
 const Example = props => {
   const [show, setShow] = useState(true);
 
-  const handleClose = () => setShow(false);
+  const handleClose = () => {
+    setShow(false);
+    props.onClose();
+  };
   //   const handleShow = () => setShow(true);
   return (
     <>

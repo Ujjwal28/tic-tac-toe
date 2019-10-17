@@ -17,15 +17,21 @@ class Board extends React.Component {
     super(props);
     this.state = {
       squares: Array(9).fill(null),
-      xIsNext: true
+      xIsNext: true,
+      isReset: true
     };
-
-    this.test = this.test.bind(this);
   }
 
-  test() {
-    console.log("Test");
+  static getDerivedStateFromProps(nextProps, state) {
+    if (nextProps && nextProps.clear === state.isReset) {
+      return {
+        squares: Array(9).fill(null),
+        isReset: !state.isReset
+      };
+    }
+    return null;
   }
+
   handleClick(i) {
     const squares = this.state.squares.slice();
     if (calculateWinner(squares) || squares[i]) {
@@ -65,10 +71,16 @@ class Board extends React.Component {
     } else {
       status = "Next player: " + (this.state.xIsNext ? "X" : "O");
     }
-
     return (
       <div>
-        {winner ? <Modal body={status} /> : null}
+        {winner ? (
+          <Modal
+            body={status}
+            onClose={() => {
+              this.setState({ squares: Array(9).fill(null) });
+            }}
+          />
+        ) : null}
         <div className="status">{status}</div>
         <div className="board-row">
           {this.renderSquare(0)}
@@ -95,11 +107,13 @@ class Game extends React.Component {
     super(props);
 
     this.state = {
-      clear: true
+      clear: false
     };
   }
   resetHandler = () => {
-    console.log("reset");
+    this.setState(prevState => {
+      return { clear: !prevState.clear };
+    });
   };
   render() {
     return (
@@ -111,7 +125,7 @@ class Game extends React.Component {
         </div>
         <div className="game">
           <div className="game-board">
-            <Board props={this.resetHandler} clear={true} />
+            <Board clear={this.state.clear} />
             <button className="btn-custom" onClick={this.resetHandler}>
               Reset
             </button>
