@@ -1,0 +1,103 @@
+body {
+  font: 14px "Century Gothic", Futura, sans-serif;
+  height: 100%;
+  background-image: url("./static/wallpaperflare.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: initial;
+}
+
+ol,
+ul {
+  padding-left: 30px;
+}
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.status {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 700;
+  color: #000;
+}
+
+.square {
+  background: rgb(50, 205, 197);
+  border: 1px solid #999;
+  border-radius: 10px;
+  font-family: "Roboto", sans-serif;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 40px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 40px;
+}
+
+.square:focus {
+  outline: none;
+}
+
+.square:hover {
+  background-color: #2ee59d;
+  box-shadow: 0px 15px 20px black;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.kbd-navigation .square:focus {
+  background: #ddd;
+}
+
+.game {
+  display: flex;
+  flex-direction: row;
+}
+
+.game-board {
+  margin: auto;
+  text-align: center;
+}
+
+.btn-custom {
+  background-color: #2ee59d;
+  border: none;
+  font-weight: bold;
+  height: 30px;
+  margin-top: 12px;
+  padding: 0;
+  text-align: center;
+  width: 60px;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px #191b1a;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+.btn-custom:hover {
+  background-color: #2ee59d;
+  box-shadow: 0px 15px 20px #191b1a;
+  color: white;
+  transform: translateY(-5px);
+}
+
+.modal-content {
+  background-color: rgb(50, 205, 197) !important;
+  border-radius: 30px !important;
+}
+
+.btn-primary {
+  border-radius: 20px !important;
+}
