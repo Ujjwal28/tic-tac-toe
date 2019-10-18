@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.b8ba2041.chunk.css",
+    "main.js": "/static/js/main.1933660a.chunk.js",
+    "main.js.map": "/static/js/main.1933660a.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.30c7ec2c.js",
+    "runtime-main.js.map": "/static/js/runtime-main.30c7ec2c.js.map",
+    "static/css/2.0624914a.chunk.css": "/static/css/2.0624914a.chunk.css",
+    "static/js/2.d595bf89.chunk.js": "/static/js/2.d595bf89.chunk.js",
+    "static/js/2.d595bf89.chunk.js.map": "/static/js/2.d595bf89.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.fb6ce2d83637e55339cde409af00492b.js": "/precache-manifest.fb6ce2d83637e55339cde409af00492b.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.0624914a.chunk.css.map": "/static/css/2.0624914a.chunk.css.map",
+    "static/css/main.b8ba2041.chunk.css.map": "/static/css/main.b8ba2041.chunk.css.map",
+    "static/media/tic-tac-toe-clipart-8.jpg": "/static/media/tic-tac-toe-clipart-8.4ffaa199.jpg",
+    "static/media/index.css": "/static/media/wallpaperflare.738a9ff6.jpg"
+  }
+}
